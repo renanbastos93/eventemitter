@@ -88,7 +88,7 @@ func tryRunAction(fn Actions, data interface{}) {
 	defer func() {
 		r := recover()
 		if r != nil {
-			fmt.Println("Recovered: ", r)
+			fmt.Printf("Recovered: %+v\n", r)
 		}
 	}()
 	fn(data)
